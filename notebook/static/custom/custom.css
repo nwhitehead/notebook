@@ -5,3 +5,27 @@ mainly to be overridden in profile/static/custom/custom.css
 
 This will always be an empty file in IPython
 */
+div#menubar-container, div#header-container {
+    display: none !important;
+}
+
+div#notebook {
+    background-color: #eeeeee;
+}
+
+/* Uncomment block below to get direct embedding (vs. indirect) */
+/*
+div#notebook-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+div#notebook {
+    padding: 0;
+}
+
+div.end_space {
+    display: none !important;
+}
+*/
