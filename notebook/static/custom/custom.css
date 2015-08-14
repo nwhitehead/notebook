@@ -134,14 +134,13 @@ div#notebook {
 
 /* input/output prompt is stone color */
 div.input_prompt {
-    color: #444;
+    color: #5D523C;
     background: url('images/blue-mocha-grunge-reversed.jpg');
     border-radius: 3px;
 }
 div.output_prompt {
-/*    background: url('images/blue-mocha-grunge-reversed.jpg'); */
     border-radius: 3px;
-    color: #888888;
+    color: #A59573;
 }
 
 /* Break up long words if we need to */
@@ -149,13 +148,52 @@ div.rendered_html p {
     word-wrap: break-word;
 }
 
+/* Original bg color #eee, then made more brown with #e0dad0
+   then lightened one step to #ebe7e0, then another to #f5f3ef
+Darkened 3 steps: D7CFC1 CDC3B1 B9AC92 A59573 7C6E50 5D523C
+*/
+/* Change codemirror bg */
+div.input_area {
+    background-color: #faf9f7;
+}
+
 /* Backticks in markdown and actual code get more distinct bg */
 div.rendered_html code {
-    background-color: #eee;
+    background-color: #ebe7e0;
     padding: 0.3em;
     border-radius: 3px;
 }
 
+/* Allow code blocks */
 div.rendered_html pre code {
+    background-color: #f5f3ef;
     display: block;
 }
+
+/* CodeMirror neat theme */
+.cm-s-ipython span.cm-comment { color: #a86; font-style: italic; }
+.cm-s-ipython span.cm-keyword { line-height: 1em; font-weight: bold; color: blue; }
+.cm-s-ipython span.cm-string { color: #a22; }
+.cm-s-ipython span.cm-builtin { line-height: 1em; font-weight: bold; color: #077; }
+.cm-s-ipython span.cm-special { line-height: 1em; font-weight: bold; color: #0aa; }
+.cm-s-ipython span.cm-variable { color: black; }
+.cm-s-ipython span.cm-number { color: #3a3; }
+.cm-s-ipython span.cm-atom { color: #3a3; }
+.cm-s-ipython span.cm-meta {color: #555;}
+.cm-s-ipython span.cm-link { color: #3a3; }
+
+div.cell {
+/*    background: url('images/congruent_outline.png');*/
+}
+
+div.cell.selected {
+    border-color: #A59573;
+}
+
+.edit_mode div.cell.selected {
+    border-color: #A59573;
+/*    border-color: #88f; */
+    box-shadow: 3px 3px 20px 0px rgba(0,0,0,0.35);
+/*    box-shadow: 5px 5px 40px 0px rgba(0,0,200,0.35);*/
+}
+
