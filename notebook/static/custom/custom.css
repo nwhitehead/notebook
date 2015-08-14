@@ -134,6 +134,7 @@ div#notebook {
 
 /* input/output prompt is stone color */
 div.input_prompt {
+    color: #444;
     background: url('images/blue-mocha-grunge-reversed.jpg');
     border-radius: 3px;
 }
@@ -150,6 +151,11 @@ div.rendered_html p {
 
 /* Backticks in markdown and actual code get more distinct bg */
 div.rendered_html code {
-    background: #dddddd;
+    background-color: #eee;
     padding: 0.3em;
+    border-radius: 3px;
+}
+
+div.rendered_html pre code {
+    display: block;
 }
