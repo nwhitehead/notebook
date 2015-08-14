@@ -170,6 +170,11 @@ div.rendered_html pre code {
     display: block;
 }
 
+/* Turn off paragraph thingies */
+div.rendered_html a.anchor-link {
+    visibility: hidden;
+}
+
 /* CodeMirror neat theme */
 .cm-s-ipython span.cm-comment { color: #a86; font-style: italic; }
 .cm-s-ipython span.cm-keyword { line-height: 1em; font-weight: bold; color: blue; }
