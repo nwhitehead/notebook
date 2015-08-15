@@ -84,9 +84,15 @@ define([
     'base/js/namespace',
     'base/js/events',
 ], function(IPython, events) {
+    /// Register kernel busy/idle permanent events
     events.on('kernel_busy.Kernel', function (evt) {
         var old = document.title;
         document.title = '$$$$-1|true';
+        document.title = old;
+    });
+    events.on('kernel_idle.Kernel', function (evt) {
+        var old = document.title;
+        document.title = '$$$$-1|false';
         document.title = old;
     });
 });
