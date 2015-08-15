@@ -80,3 +80,13 @@
  * @class customjs
  * @static
  */
+define([
+    'base/js/namespace',
+    'base/js/events',
+], function(IPython, events) {
+    events.on('kernel_busy.Kernel', function (evt) {
+        var old = document.title;
+        document.title = '$$$$-1|true';
+        document.title = old;
+    });
+});
