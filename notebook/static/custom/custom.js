@@ -84,15 +84,19 @@ define([
     'base/js/namespace',
     'base/js/events',
 ], function(IPython, events) {
-    /// Register kernel busy/idle permanent events
-    events.on('kernel_busy.Kernel', function (evt) {
+    var flash = function(txt) {
         var old = document.title;
-        document.title = '$$$$-1|true';
+        document.title = txt;
         document.title = old;
+    };
+    /// Register permanent events
+    events.on('kernel_busy.Kernel', function (evt) {
+        flash('$$$$-1|true');
     });
     events.on('kernel_idle.Kernel', function (evt) {
-        var old = document.title;
-        document.title = '$$$$-1|false';
-        document.title = old;
+        flash('$$$$-1|false');
+    });
+    events.on('notebook_saved.Notebook', function (evt) {
+        flash('$$$$-2|');
     });
 });
