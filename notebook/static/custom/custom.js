@@ -96,7 +96,4 @@ define([
     events.on('kernel_idle.Kernel', function (evt) {
         flash('$$$$-1|false');
     });
-    events.on('notebook_saved.Notebook', function (evt) {
-        flash('$$$$-2|');
-    });
 });
